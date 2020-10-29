@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import { useDispatch, useSelector } from 'react-redux';
 
-function App() {
+import Guitar from './components/guitar/Guitar';
+import ChordsList from './components/chordsList/ChordsList';
+import ChordTitle from './components/chordTitle/ChordTitle';
+
+const Container = styled.div`
+  position: relative;
+	max-width: 500px;
+	margin: 0 auto;
+  padding: 2rem;
+  border: 2px solid #000;
+`;
+
+const App = () => {
+
+  const {chord} = useSelector(state => state);
+  // console.log(chord);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <ChordsList />
+      <ChordTitle chord={chord}/>
+      <Guitar chord={chord}/>
+    </Container>
   );
 }
 
