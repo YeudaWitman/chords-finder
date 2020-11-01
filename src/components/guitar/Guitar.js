@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import Fret from './Fret';
+import React from "react";
+import styled from "styled-components";
+import Fret from "./Fret";
 
 const StyledGuitar = styled.div`
 	display: flex;
@@ -16,18 +16,14 @@ const StyledGuitar = styled.div`
 	border-top: 10px solid #000;
 `;
 
-const Guitar = ({chord}) => {
+const Guitar = ({ chord }) => {
 	let rows = [];
 
 	for (let i = 1; i < 6; i++) {
 		rows.push(<Fret key={i} fretIndex={i} />);
 	}
 
-	return (
-		<StyledGuitar>
-			{rows}
-		</StyledGuitar>
-	)
-}
+	return <StyledGuitar>{rows}</StyledGuitar>;
+};
 
 export default Guitar;
