@@ -1,28 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import styled from 'styled-components';
-
-const Finger = styled.div`
-	height: 40px;
-	width: 40px;
-	background-color: #000;
-	border-radius: 20px;
-	margin: -21px;
-	color: #fff;
-	text-align: center;
-	padding: .1rem;
-	font-size: 1.2rem;
-`;
-
-const Bridge = styled.div`
-  position: absolute;
-  top: 22px;
-  left: -23px;
-  background-color: #000;
-  border-radius: 20px;
-  height: 40px;
-  width: 339px;
-`;
+import { Finger, Bridge } from './style';
 
 const FingerSign = ({fretIndex, strIndex}) => {
 

@@ -1,25 +1,22 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 
 import styled from 'styled-components';
-import FingerSign from './FingerSign';
+import FingerSign from './fingerSign/FingerSign';
 
-const TableData = styled.td`
+const StringCell = styled.span`
   position: relative;
-  width: 20%;
-  height: 20%;
+  width: ${p => p.lastString ? '0' : '20%'};
   text-align: center;
-  border: 3px solid #a5a5a5;
-  border-top: 5px solid #000;
-  /* border-right: none; */
+  border-left: ${p => (6-p.strIndex)}px solid #727272;
+  border-right: ${p => p.lastString ? 'none' : '2px solid #727272'};
 `;
 
 const String = (props) => {
-  
+
   return (
-    <TableData>
+    <StringCell {...props}>
       <FingerSign {...props} />
-    </TableData>
+    </StringCell>
   )
 }
 

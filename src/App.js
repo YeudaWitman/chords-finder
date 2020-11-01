@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Guitar from './components/guitar/Guitar';
 import ChordsList from './components/chordsList/ChordsList';
 import ChordTitle from './components/chordTitle/ChordTitle';
+import Charts from './components/charts/Charts';
 
 const Container = styled.div`
   position: relative;
@@ -22,6 +23,7 @@ const App = () => {
     <Container>
       <ChordsList />
       <ChordTitle chord={chord}/>
+      <Charts />
       <Guitar chord={chord}/>
     </Container>
   );

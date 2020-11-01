@@ -2,14 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import Fret from './Fret';
 
-const StyledGuitar = styled.table`
+const StyledGuitar = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* align-items: stretch;
+	align-content: stretch; */
 	margin: 0.3rem auto 0 auto;
 	width: 300px;
 	max-width: 300px;
 	height: 450px;
 	background-color: #ecf0ec;
 	border-top: 10px solid #000;
-	border-collapse: collapse;
 `;
 
 const Guitar = ({chord}) => {
@@ -21,9 +25,7 @@ const Guitar = ({chord}) => {
 
 	return (
 		<StyledGuitar>
-			<tbody>
-				{rows}
-			</tbody>
+			{rows}
 		</StyledGuitar>
 	)
 }
