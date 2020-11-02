@@ -19,7 +19,7 @@ const StyledGuitar = styled.div`
 const Guitar = ({ chord }) => {
 	let rows = [];
 
-	for (let i = 1; i < 6; i++) {
+	for (let i = 0; i < 5; i++) {
 		rows.push(<Fret key={i} fretIndex={i} />);
 	}
 

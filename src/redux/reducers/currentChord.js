@@ -6,7 +6,7 @@ const initChord = {
 	base: 1,
 	opens: [],
 	off: [],
-	fingers: [[null], [0], [0], [0], [0], [0], [0]],
+	fingers: [[], [], [], [], [], []],
 };
 
 export const search = (state = initChord, action) => {

@@ -12,8 +12,8 @@ const FretLine = styled.div`
 const Fret = (props) => {
 	let last = false;
 	let strs = [];
-	const numOfStrings = 6;
-	for (let i = 1; i <= numOfStrings; i++) {
+	const numOfStrings = 5;
+	for (let i = 0; i <= numOfStrings; i++) {
 		if (i === numOfStrings) {
 			last = true;
 		}
